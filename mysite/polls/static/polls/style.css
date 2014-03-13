@@ -1,0 +1,15 @@
+ul#my-first-list li a {
+	color: green;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+ul.second-list li a {
+	color: redz;
+}
+
+body {
+	background: white url("images/background.gif") no-repeat;
+	background-size: 100%;
+}

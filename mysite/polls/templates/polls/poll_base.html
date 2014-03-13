@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block app_styles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+{% endblock app_styles %}
+
+{% block content %}
+	{% block poll_content %}	
+	{% endblock poll_content %}
+{% endblock content %}

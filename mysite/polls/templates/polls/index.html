@@ -1,0 +1,28 @@
+{% extends "polls/poll_base.html" %}
+
+{% block poll_content %}
+{% if latest_poll_list %}
+	<table id="poll-list">
+		<thead>
+			<tr>
+				<th>Question</th>
+				<th>Date Published</th>
+				<th>Published Recently?</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for poll in latest_poll_list %}
+			<tr>
+				<td>
+					<a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a>
+				</td>
+				<td>{{ poll.pub_date }}</td>
+				<td>{{ poll.was_published_recently }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock poll_content %}
